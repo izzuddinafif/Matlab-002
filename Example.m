@@ -27,7 +27,7 @@ for k=1:N
         TT(k)=T(k)+TT(k-1);
     end
 end
-L=1460; % 4 years
+L=1461; % 3 years
 Cf=100;
 a=100;
 b=50;
