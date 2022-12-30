@@ -3,7 +3,7 @@ format longG;
 r=0.265;
 x=350;
 y=3.85;
-N=7;
+N=14;
 for k=1:N
     if k==1
         A(k)=0;
@@ -25,7 +25,7 @@ for k=1:N
         TT(k)=T(k)+TT(k-1);
     end
 end
-L=1095; % days of lease
+L=1460 %days of lease
 Cf=100;
 a=100;
 b=50;
@@ -37,7 +37,6 @@ D=integral(h0,0,L);
 for i=1:N
     tk(i)=round(TT(i)*10000);
 end
-dd=ones(1,N);
 for i=1:N    
 %{
  if i==1
