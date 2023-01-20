@@ -4,7 +4,7 @@ clear; close all; clc;
 format longG
 N=30;
 x=350;
-y=3.85;
+y=4;
 dcp=2;
 drp=[10,50,100,500];
 Rth=[0.313,0.289,0.277,0.265];
@@ -12,7 +12,7 @@ Tc=4;
 Tp=2;
 r=0.01:0.01:1;
 h=@(zs) (y/x)*(zs/x).^(y-1);
-no=2; % !!!!!!!!! ganti ini untuk pilih drp (1-4; 1=10, 2=50, dst)
+no=1; % !!!!!!!!! ganti ini untuk pilih drp (1-4; 1=10, 2=50, dst)
 % Step 1: Compute solutions Tk of Equation (11). Theses solutions are functions of reliability threshold Rth
 Rrth=0.31;
 for k=1:N
@@ -122,7 +122,7 @@ for k=1:N
         TT(k)=T(k)+TT(k-1);
     end
 end
-L=1460 %days of lease
+L=1460; %days of lease
 Cf=100;
 a=100;
 b=50;
@@ -162,3 +162,4 @@ grid on
 figure(2)
 plot(1:30,ava(1:30))
 grid on
+datetime

@@ -1,8 +1,8 @@
 clc; clear; close all;
 format longG;
-r=0.265;
+r=0.24;
 x=350;
-y=3.85;
+y=4;
 N=14;
 for k=1:N
     if k==1
