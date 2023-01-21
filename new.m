@@ -2,7 +2,7 @@
 datetime
 clear; close all; clc;
 format longG
-N=30;
+N=10;
 x=350;
 y=4;
 dcp=2;
@@ -10,7 +10,7 @@ drp=[10,50,100,500];
 Rth=[0.313,0.289,0.277,0.265];
 Tc=4;
 Tp=2;
-r=0.01:0.01:1;
+r=0.001:0.001:1;
 h=@(zs) (y/x)*(zs/x).^(y-1);
 no=1; % !!!!!!!!! ganti ini untuk pilih drp (1-4; 1=10, 2=50, dst)
 % Step 1: Compute solutions Tk of Equation (11). Theses solutions are functions of reliability threshold Rth
@@ -48,7 +48,7 @@ disp("Availability = %");
 disp(M*100);
 disp("Number of maintenance = ");
 disp(I);
-for i=1:100
+for i=1:1000
     for k=1:N
         if k==1
             A(k)=0;
@@ -160,6 +160,6 @@ figure(1)
 plot(1:N,J) 
 grid on
 figure(2)
-plot(1:30,ava(1:30))
+plot(1:N,ava(1:N))
 grid on
 datetime
