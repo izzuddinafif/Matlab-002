@@ -74,11 +74,11 @@ for i=1:1000
 [Av(i),n(i)]=max(av(i,:));
 end
 [AA,V]=max(Av);
-rr=V/100;
+rr=V/10;
 disp("Availability = %");
 disp(AA*100);
 disp("Rth = %")
-disp(rr*100);
+disp(rr);
 grid on
 % Step 4: From results of Steps 1 & 2 together with the optimal number N from Step 3, compute Tk (k = 1, . . . , N),
 clear T A a B b
@@ -160,6 +160,6 @@ figure(1)
 plot(1:N,J) 
 grid on
 figure(2)
-plot(1:N,ava(1:N))
+plot(1:10,av(V,:))
 grid on
 datetime
