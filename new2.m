@@ -26,3 +26,6 @@ for j=1:100
     s2(j)=a+b*d+s2(j-1);
     J(j)=Cf*abs(D-s1(j))+s2(j);
 end
+plot(1:100,J)
+xlabel("k (instances)")
+ylabel("J (cost)")
