@@ -2,7 +2,7 @@
 datetime
 clear; close all; clc;
 format longG
-N=10;
+N=30;
 x=350;
 y=4;
 dcp=2;
